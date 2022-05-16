@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <h1>{{ title }}</h1>
+    <ul>
+      {% for c in contacts %}
+        <li>{{ c.fullName }} - <a target="_blank" href="/contacts/{{ c._id }}"> show details </a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
