@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Product</title>
+  </head>
+  <body>
+      <!-- /products/add  -->
+    <center>
+      <h1>{{ product.title }}</h1>
+      <fieldset>
+        <form method="post" enctype="multipart/form-data" >
+          <table>
+            <tr>
+              <td>Title</td>
+              <td><input type="text" value={{ product.title }} name="title" /></td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td><input type="number" name="price" value={{ product.price }} /></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><input type="text" name="description" value={{ product.description }} /></td>
+            </tr>
+            <tr>
+              <td>Image</td>
+              <td>
+                <img src="/images/{{product.image}}" />
+                <input type="file" name="avatar" value={{ product.image }} />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="submit" value="save" /></td>
+            </tr>
+          </table>
+        </form>
+      </fieldset>
+    </center>
+  </body>
+</html>
