@@ -10,15 +10,13 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost/database', (err)=>{
+mongoose.connect('mongodb://databaseService/database', (err)=>{
   if(err){
     console.log(err);
   }else{
     console.log('database connected');
   }
 })
-
-
 
 
 // view engine setup
